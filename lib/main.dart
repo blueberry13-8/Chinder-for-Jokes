@@ -53,8 +53,8 @@ class Joke {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var r = Random(TimeOfDay.minutesPerHour);
-  var numImages = 10;
+  var r = Random();
+  var numImages = 26;
 
   Future<Joke> fetchJoke() async {
     final response =
@@ -89,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
       swipeThreshold: MediaQuery.of(context).size.width / 4,
       minimumVelocity: 1500,
       rotationFactor: 0.4 / 3.14,
-      swipeAnimationDuration: const Duration(milliseconds: 400),
+      swipeAnimationDuration: const Duration(milliseconds: 600),
     );
     return Scaffold(
       backgroundColor: Colors.black26,
