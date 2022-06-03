@@ -76,20 +76,20 @@ class _MyHomePageState extends State<MyHomePage> {
         debugPrint("Card deck empty");
       },
       onLeftSwipe: (Card card) {
-        debugPrint("Swiped left!    " + cardDeck.length.toString());
+        debugPrint("Swiped left!     " + cardDeck.length.toString());
         cardDeck.removeAt(0);
-        setState((){});
+        setState(() {});
       },
       onRightSwipe: (Card card) {
         debugPrint("Swiped right!    " + cardDeck.length.toString());
         cardDeck.removeAt(0);
-        setState((){});
+        setState(() {});
       },
-      cardWidth: MediaQuery.of(context).size.width * 0.7,
-      swipeThreshold: MediaQuery.of(context).size.width / 2.5,
-      minimumVelocity: 1000,
-      rotationFactor: 1.3 / 3.14,
-      swipeAnimationDuration: const Duration(milliseconds: 500),
+      cardWidth: MediaQuery.of(context).size.width * 0.9,
+      swipeThreshold: MediaQuery.of(context).size.width / 4,
+      minimumVelocity: 1500,
+      rotationFactor: 0.4 / 3.14,
+      swipeAnimationDuration: const Duration(milliseconds: 400),
     );
     return Scaffold(
       backgroundColor: Colors.black26,
@@ -98,7 +98,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: SafeArea(
         bottom: false,
-        top: true,
         child: Center(
           child: Column(
             children: [
@@ -129,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
   List<Card> getCardDeck(BuildContext context) {
     int j = 0;
     if (cardDeck.isEmpty) {
-      j = 10;
+      j = 1;
     }
     for (int i = 0; i < 1 + j; ++i) {
       int index = r.nextInt(numImages);
@@ -159,7 +158,6 @@ class _MyHomePageState extends State<MyHomePage> {
                             AsyncSnapshot<Joke> snapshot) {
                           if (snapshot.hasData) {
                             print(snapshot.data!.joke);
-                            Future.delayed(const Duration(seconds: 1));
                             return Text(
                               snapshot.data!.joke,
                               style: const TextStyle(
