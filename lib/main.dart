@@ -76,14 +76,16 @@ class _MyHomePageState extends State<MyHomePage> {
         debugPrint("Card deck empty");
       },
       onLeftSwipe: (Card card) {
-        debugPrint("Swiped left!     " + cardDeck.length.toString());
-        cardDeck.removeAt(0);
-        setState(() {});
+        debugPrint("Swiped left!     ${cardDeck.length}");
+        setState(() {
+          cardDeck.removeAt(0);
+        });
       },
       onRightSwipe: (Card card) {
-        debugPrint("Swiped right!    " + cardDeck.length.toString());
-        cardDeck.removeAt(0);
-        setState(() {});
+        debugPrint("Swiped right!    ${cardDeck.length}");
+        setState(() {
+          cardDeck.removeAt(0);
+        });
       },
       cardWidth: MediaQuery.of(context).size.width * 0.9,
       swipeThreshold: MediaQuery.of(context).size.width / 4,
@@ -130,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
     if (cardDeck.isEmpty) {
       j = 1;
     }
-    for (int i = 0; i < 1 + j; ++i) {
+    for (int i = 0; i < 1 + j; i++) {
       int index = r.nextInt(numImages);
       cardDeck.add(
         Card(
@@ -157,7 +159,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         builder: (BuildContext context,
                             AsyncSnapshot<Joke> snapshot) {
                           if (snapshot.hasData) {
-                            print(snapshot.data!.joke);
+                            debugPrint(snapshot.data!.joke);
                             return Text(
                               snapshot.data!.joke,
                               style: const TextStyle(
@@ -166,6 +168,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             );
                           } else {
+                            debugPrint("Wait...");
                             return const Text(
                               "Waiting for a REAL JOKE...",
                               style: TextStyle(
