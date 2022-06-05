@@ -10,6 +10,10 @@ special card(like tinder) with image.
  - Beautiful images for each joke
  - Like button(will be added special page for favorite jokes for this button)
 
+## Bugs
+
+If you cannot see the card after the launch, then press like button a few times.
+
 ## Tools which are used for development
 
 I used [swiping_card_deck for](https://github.com/jushutch/swiping_card_deck) for animation and 
