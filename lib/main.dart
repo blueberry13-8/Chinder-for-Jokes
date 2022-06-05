@@ -68,6 +68,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
   List<Card> cardDeck = [];
 
+  // @override
+  // void initState(){
+  //   super.initState();
+  //   cardDeck = getCardDeck(context);
+  // }
+
   @override
   Widget build(BuildContext context) {
     SwipingCardDeck deck = SwipingCardDeck(
@@ -130,7 +136,7 @@ class _MyHomePageState extends State<MyHomePage> {
   List<Card> getCardDeck(BuildContext context) {
     int j = 0;
     if (cardDeck.isEmpty) {
-      j = 1;
+      j = 3;
     }
     for (int i = 0; i < 1 + j; i++) {
       int index = r.nextInt(numImages);
