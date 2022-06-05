@@ -15,6 +15,10 @@ special card(like tinder) with image.
 I used [swiping_card_deck for](https://github.com/jushutch/swiping_card_deck) for animation and 
 comfortable coding. 
 
+## Link to the .apk
+
+[Google drive link](https://drive.google.com/file/d/1lbeDWccqJxjNODtx7tq6K6uO3x8830Fx/view?usp=sharing)
+
 ## Screenshots
 
 ![Screenshot](assets/screenshots/Screenshot1.png)
