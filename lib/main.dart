@@ -1,10 +1,9 @@
 import 'dart:core';
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'dart:convert';
-import 'package:http/http.dart' as http;
 import 'package:swiping_card_deck/swiping_card_deck.dart';
 import 'package:flutter/services.dart';
+import 'joke.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,41 +37,11 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class Joke {
-  final String joke;
-
-  const Joke({
-    required this.joke,
-  });
-
-  factory Joke.fromJson(Map<String, dynamic> json) {
-    return Joke(
-      joke: json['value'],
-    );
-  }
-}
-
 class _MyHomePageState extends State<MyHomePage> {
   var r = Random();
   var numImages = 26;
 
-  Future<Joke> fetchJoke() async {
-    final response =
-        await http.get(Uri.parse('https://api.chucknorris.io/jokes/random'));
-    if (response.statusCode == 200) {
-      return Joke.fromJson(jsonDecode(response.body));
-    } else {
-      throw Exception('Failed to load JOKE T_T');
-    }
-  }
-
   List<Card> cardDeck = [];
-
-  // @override
-  // void initState(){
-  //   super.initState();
-  //   cardDeck = getCardDeck(context);
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -136,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
   List<Card> getCardDeck(BuildContext context) {
     int j = 0;
     if (cardDeck.isEmpty) {
-      j = 3;
+      j = 1;
     }
     for (int i = 0; i < 1 + j; i++) {
       int index = r.nextInt(numImages);

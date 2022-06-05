@@ -1,16 +1,22 @@
-# test_flutter
+# chinder_for_jokes
 
-A new Flutter project.
+**Chinder for Jokes**
+Application for Android and IOS, which is showing jokes about Chuck Norris. Each joke is located on 
+special card(like tinder) with image.
 
-## Getting Started
+## Features of App
 
-This project is a starting point for a Flutter application.
+ - The best jokes about Chuck Norris
+ - Beautiful images for each joke
+ - Like button(will be added special page for favorite jokes for this button)
 
-A few resources to get you started if this is your first Flutter project:
+## Tools which are used for development
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+I used [swiping_card_deck for](https://github.com/jushutch/swiping_card_deck) for animation and 
+comfortable coding. 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots
+
+![Screenshot](assets/screenshots/Screenshot1.png)
+![Screenshot](assets/screenshots/Screenshot2.png)
+
