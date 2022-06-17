@@ -1,7 +1,9 @@
-import 'dart:convert';
-import 'package:http/http.dart' as http;
+import 'package:hive/hive.dart';
+part 'joke.g.dart';
 
+@HiveType(typeId: 0)
 class Joke {
+  @HiveField(0)
   final String joke;
 
   const Joke({
@@ -13,14 +15,10 @@ class Joke {
       joke: json['value'],
     );
   }
-}
 
-Future<Joke> fetchJoke() async {
-  final response =
-  await http.get(Uri.parse('https://api.chucknorris.io/jokes/random'));
-  if (response.statusCode == 200) {
-    return Joke.fromJson(jsonDecode(response.body));
-  } else {
-    throw Exception('Failed to load JOKE T_T');
+  Map<String, dynamic> toJson() {
+    return {
+      'value': joke,
+    };
   }
 }
