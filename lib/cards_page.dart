@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:swiping_card_deck/swiping_card_deck.dart';
 import 'favorite_page.dart';
+import 'filter_page.dart';
 import 'list_of_cards.dart';
 import 'joke.dart';
 import 'joke_func.dart';
@@ -61,13 +62,21 @@ class _MyHomePageState extends State<MyHomePage> {
         swipeAnimationDuration: const Duration(milliseconds: 650),
       );
     }
-    if (stringOnDisplay == errorJoke && jokes[0] != errorJoke){
-      setState((){});
+    if (stringOnDisplay == errorJoke && jokes[0] != errorJoke) {
+      setState(() {});
     }
     return Scaffold(
       backgroundColor: Colors.black26,
       appBar: AppBar(
         title: Text(widget.title),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const FilterPage(title: 'Filter')));
+            },
+            icon: const Icon(Icons.edit, color: Color(0xffffffff)),
+          ),
+        ],
       ),
       body: SafeArea(
         child: Center(

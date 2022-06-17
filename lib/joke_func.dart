@@ -3,9 +3,11 @@ import 'package:flutter/cupertino.dart';
 import 'joke.dart';
 import 'package:http/http.dart' as http;
 
+String category = 'random';
+
 Future<Joke> fetchJoke() async {
   final response =
-      await http.get(Uri.parse('https://api.chucknorris.io/jokes/random'));
+      await http.get(Uri.parse('https://api.chucknorris.io/jokes/$category'));
   if (response.statusCode == 200) {
     return Joke.fromJson(jsonDecode(response.body));
   } else {
