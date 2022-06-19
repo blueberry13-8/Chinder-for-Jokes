@@ -92,7 +92,7 @@ class _FavoritePageState extends State<FavoritePage> {
                             ),
                           ),
                           const SizedBox(
-                              height: 7,
+                              height: 6,
                               child: ColoredBox(color: Colors.black87))
                         ],
                       );
@@ -125,11 +125,11 @@ class _FavoritePageState extends State<FavoritePage> {
                 .doc('jokes')
                 .get(),
             builder: (context, value) {
-              if (value.connectionState == ConnectionState.none){
+              if (value.connectionState != ConnectionState.done){
                 return Center(
                   child: Container(
                     alignment: Alignment.center,
-                    child: const Text('Waiting for network.'),
+                    child: const Text('Waiting for network..'),
                   ),
                 );
               }
@@ -191,7 +191,7 @@ class _FavoritePageState extends State<FavoritePage> {
                         ),
                       ),
                       const SizedBox(
-                          height: 7, child: ColoredBox(color: Colors.black87))
+                          height: 6, child: ColoredBox(color: Colors.black87))
                     ],
                   );
                 },

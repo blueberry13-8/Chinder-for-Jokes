@@ -17,12 +17,12 @@ be deleted from favorite page. Moreover,
 ## Tools which are used for development
 
 I used [swiping_card_deck for](https://github.com/jushutch/swiping_card_deck) for animation and 
-comfortable coding. Moreover, I used FireBase for Shared favorite list and crash logs.
+comfortable coding. Moreover, I used FireBase for Shared favorite list and crash logs, also Hive for
+storing data locally.
 
 ## Link to the .apk
 
-переделай
-[Google drive link](https://drive.google.com/file/d/1lbeDWccqJxjNODtx7tq6K6uO3x8830Fx/view?usp=sharing)
+[Google drive link](https://drive.google.com/file/d/1tk9lnal27juiShPm5zXn5ZzsYjeUh77E/view?usp=sharing)
 
 ## Screenshots
 

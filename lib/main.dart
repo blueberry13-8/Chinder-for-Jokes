@@ -4,6 +4,7 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:test_flutter/error_page.dart';
 import 'cards_page.dart';
 import 'firebase_options.dart';
 import 'joke.dart';
@@ -18,7 +19,8 @@ Future<void> main() async {
       options: DefaultFirebaseOptions.currentPlatform,
     );
   } catch(e){
-    debugPrint(e);
+    //debugPrint(e.toString());
+    runApp(const ErrorPage());
   }
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
   runApp(const MyApp());
