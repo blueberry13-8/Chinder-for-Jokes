@@ -32,10 +32,6 @@ void updateJokeList() {
       jokes[1] = value.joke;
     });
   }
-  debugPrint('0 : ${jokes[0]}');
-  debugPrint('1 : ${jokes[1]}');
-  debugPrint('2 : ${jokes[2]}');
-  debugPrint('***************************');
   jokes[0] = jokes[1];
   jokes[1] = jokes[2];
   jokes[2] = errorJoke;

@@ -37,7 +37,7 @@ class _FavoritePageState extends State<FavoritePage> {
               if (lBox.isEmpty) {
                 return const Center(
                   child: Text(
-                    'Empty',
+                    'Waiting for the best jokes..',
                     style: TextStyle(fontSize: 20),
                   ),
                 );
@@ -106,7 +106,6 @@ class _FavoritePageState extends State<FavoritePage> {
         //bottomNavigationBar: ,
       );
     } else {
-      debugPrint('FireStore mode.');
       return Scaffold(
         appBar: AppBar(
           title: const Text('Shared Favorite Jokes'),
@@ -126,7 +125,15 @@ class _FavoritePageState extends State<FavoritePage> {
                 .doc('jokes')
                 .get(),
             builder: (context, value) {
-              if (!value.hasData) {
+              if (value.connectionState == ConnectionState.none){
+                return Center(
+                  child: Container(
+                    alignment: Alignment.center,
+                    child: const Text('Waiting for network.'),
+                  ),
+                );
+              }
+              if (!value.hasData || value.connectionState == ConnectionState.waiting) {
                 return Center(
                   child: Container(
                     alignment: Alignment.center,

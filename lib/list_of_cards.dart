@@ -88,35 +88,3 @@ List<Card> getStartCardDeck(BuildContext context, List<Card> cardDeck, int N) {
   updateJokeList();
   return cardDeck;
 }
-
-/*
-FutureBuilder<Joke>(
-                      future: fetchJoke(),
-                      builder: (context, snapshot) {
-                        if (snapshot.hasData) {
-                          return Text(
-                            snapshot.data!.joke,
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                            ),
-                          );
-                        } else if (snapshot.hasError) {
-                          return const Text(
-                            'Check your Internet Connection!',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                            ),
-                          );
-                        }
-                        return const Text(
-                          'Waiting for a REAL JOKE...',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                          ),
-                        );
-                      },
-                    ),
- */

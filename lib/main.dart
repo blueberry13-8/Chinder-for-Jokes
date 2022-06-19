@@ -13,9 +13,13 @@ Future<void> main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(JokeAdapter());
   await Hive.openLazyBox<Joke>('box_for_joke');
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  try {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+  } catch(e){
+    debugPrint(e);
+  }
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
   runApp(const MyApp());
 }
