@@ -26,11 +26,18 @@ comfortable coding. Moreover, I used FireBase for Shared favorite list and crash
 
 ## Screenshots
 
-переделай
+<div style="width:300px ; height:600px">
 ![Screenshot](assets/screenshots/Screenshot2_1.png)
+</div>
+<div style="width:300px ; height:600px">
 ![Screenshot](assets/screenshots/Screenshot2_2.png)
+</div>
+<div style="width:300px ; height:600px">
 ![Screenshot](assets/screenshots/Screenshot2_3.png)
+</div>
+<div style="width:300px ; height:600px">
 ![Screenshot](assets/screenshots/Screenshot2_4.png)
+</div>
+<div style="width:300px ; height:600px">
 ![Screenshot](assets/screenshots/Screenshot2_5.png)
-<img scr="/assets/screenshots/Screenshot2_1.png" width="300" height="600">
-
+</div>
