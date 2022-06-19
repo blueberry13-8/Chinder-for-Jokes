@@ -32,5 +32,5 @@ comfortable coding. Moreover, I used FireBase for Shared favorite list and crash
 ![Screenshot](assets/screenshots/Screenshot2_3.png)
 ![Screenshot](assets/screenshots/Screenshot2_4.png)
 ![Screenshot](assets/screenshots/Screenshot2_5.png)
-![<img scr="assets/screenshots/Screenshot2_1.png">]()
+![<img scr=".assets/screenshots/Screenshot2_1.png">]()
 
